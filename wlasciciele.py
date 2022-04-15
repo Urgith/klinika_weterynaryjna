@@ -5,11 +5,11 @@ import pandas as pd
 import numpy as np
 
 
-imiona_m = pd.read_csv('imiona_m.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
-imiona_k = pd.read_csv('imiona_k.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
-nazwiska_m = pd.read_csv('nazwiska_m.csv')
-nazwiska_k = pd.read_csv('nazwiska_k.csv')
-adres = pd.read_csv('adres.csv', usecols=['ETYKIETA_NAZWA_SKROCONA'])
+imiona_m = pd.read_csv('data/imiona_m.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
+imiona_k = pd.read_csv('data/imiona_k.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
+nazwiska_m = pd.read_csv('data/nazwiska_m.csv')
+nazwiska_k = pd.read_csv('data/nazwiska_k.csv')
+adres = pd.read_csv('data/adres.csv', usecols=['ETYKIETA_NAZWA_SKROCONA'])
 
 commend = 'INSERT INTO wlasciciele(imie, nazwisko, telefon, adres, data_rejestracji) VALUES '
 for i in range(400):

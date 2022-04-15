@@ -8,13 +8,13 @@ import pandas as pd
 import numpy as np
 
 
-imiona_m = pd.read_csv('imiona_m.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
-imiona_k = pd.read_csv('imiona_k.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
+imiona_m = pd.read_csv('data/imiona_m.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
+imiona_k = pd.read_csv('data/imiona_k.csv', delimiter=';', usecols=['IMIĘ_PIERWSZE', 'LICZBA_WYSTĄPIEŃ'])
 
-nazwiska_m = pd.read_csv('nazwiska_m.csv')
-nazwiska_k = pd.read_csv('nazwiska_k.csv')
+nazwiska_m = pd.read_csv('data/nazwiska_m.csv')
+nazwiska_k = pd.read_csv('data/nazwiska_k.csv')
 
-ulice = pd.read_csv('adres.csv', usecols=['ETYKIETA_NAZWA_SKROCONA'])
+ulice = pd.read_csv('data/adres.csv', usecols=['ETYKIETA_NAZWA_SKROCONA'])
 
 s = ['lekarz weterynarii', 'technik weterynarii', 'obsługa klienta',
      'informatyk', 'handlowiec', 'woźny']

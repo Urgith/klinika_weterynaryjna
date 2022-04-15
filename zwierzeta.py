@@ -7,10 +7,10 @@ import csv
 names_M = []
 names_K = []
 
-fileM = open("imionaM.csv",encoding='utf8')
+fileM = open("data/imionaM.csv",encoding='utf8')
 readM = csv.reader(fileM)
 
-fileK = open("imionaK.csv",encoding='utf8')
+fileK = open("data/imionaK.csv",encoding='utf8')
 readK = csv.reader(fileK)
 
 for row in readM:
