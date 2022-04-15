@@ -1,0 +1,37 @@
+﻿1;Antykoncepcja;65
+2;Sterylizacja;400
+3;Czipowanie;50
+4;Drobny zabieg chirurgiczny;200
+5;Drobny zabieg w znieczuleniu;175
+6;Eutanazja;150
+7;Inseminacja;100
+8;Konsultacja behawiorysty;180
+9;Konsultacja weterynaryjna;30
+10;Leczenie złamań;450
+11;Odrobaczanie;60
+12;Szczepienie profilaktyczne;60
+13;Szczepienie przeciwko wściekliźnie;50
+14;Usuwanie kamienia nazębnego;100
+15;Usuwanie kleszczy;30
+16;Wizyta domowa;160
+17;Wizyta w gabinecie ;100
+18;Wydanie paszportu dla zwierzęcia;100
+19;Znieczulenie ogólne;40
+20;Zwalczanie pcheł;30
+21;Badania parazytologiczne;30
+22;Badanie biochemiczne krwi;70
+23;Badanie kału na obecność pasożytów;50
+24;Badanie moczu;30
+25;Badanie morfologiczne krwi;30
+26;Badanie zeskrobin naskórka;50
+27;Cytologia;30
+28;EKG;50
+29;Określenie grupy krwi;120
+30;RTG;100
+31;Testy alergiczne;200
+32;USG;80
+33;Czyszczenie uszu;30
+34;Czyszczenie uzębienia;200
+35;Kąpiel;70
+36;Obcinanie pazurów;15
+37;Strzyżenie ;150
