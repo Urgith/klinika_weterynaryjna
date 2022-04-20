@@ -12,9 +12,10 @@ for row in result:
     id.append(row['id_pracownika'])
     zatrudnienie.append(row['data_zatrudnienia'])
     stanowisko.append(row['stanowisko_pracy'])
+
 result.close()
 
-zarobki = {'lekarz weterynarii':(6000, 400), 'informatyk':(4500, 350), 'handlowiec':(4000, 300), 'technik weterynarii':(3500, 250), 'obsługa klienta':(2500, 200), 'woźny':(2500, 200)}
+zarobki = {'lekarz weterynarii': (6000, 400), 'informatyk': (4500, 350), 'handlowiec': (4000, 300), 'technik weterynarii': (3500, 250), 'obsługa klienta': (2500, 200), 'woźny': (2500, 200)}
 etaty = [[1, 1, 1, 1, 1, 1], [1, 1, 1, 0, 0, 0], [1, 1, 1, 0, 0, 0], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1], [1, 1, 1, 1, 1, 1],  [0, 0, 0], [0, 0, 0], [0, 0, 0]]
 nazwy_etatow = {0:'pół', 1:'pełen'}
 
@@ -40,7 +41,7 @@ for i in range(len(id)):
         start += relativedelta(months=1)
 
         if i != 0:
-            premia += np.round(np.random.normal(zarobki[stanowisko[i]][0]/100, zarobki[stanowisko[i]][1]/10) / (2 - etaty[i][j]), 2)
+            premia += np.round(np.random.normal(zarobki[stanowisko[i]][0] / 100, zarobki[stanowisko[i]][1] / 10) / (2 - etaty[i][j]), 2)
 
         j += 1
 

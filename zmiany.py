@@ -14,6 +14,7 @@ for row in result:
 
     else:
         rejestratorzy.append(row['id_pracownika'])
+
 result.close()
 
 commend = 'INSERT INTO zmiany(id_lekarza, id_asystenta, id_rejestratora) VALUES '

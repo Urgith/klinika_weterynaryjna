@@ -35,10 +35,10 @@ for i in range(len(stanowiska_pracy)):
         plec = 'kobieta'
 
     if plec == 'mężczyzna':
-        commend += '({}, {}, {}, {}, {}, {}, {}, {}),'.format("'" + imiona_m['IMIĘ_PIERWSZE'].sample(n=1, weights=imiona_m['LICZBA_WYSTĄPIEŃ']).values[0] + "'", "'" + str(nazwiska_m['Nawisko aktualne'].sample(n=1, weights=nazwiska_m['Liczba']).values[0]) + "'", "'" + str(plec) + "'", "'" + str(start_ur + timedelta(days=random_ur)) + "'", "'" + str(ulice.sample().values[0, 0]) + "'", "'" + str(int(534720811 + 154406493*np.random.random())) + "'", "'" + stanowiska_pracy[i] + "'", "'" + str(str(start_zat + min(i//6, 1)*relativedelta(months=3))) + "'")
+        commend += '({}, {}, {}, {}, {}, {}, {}, {}),'.format("'" + imiona_m['IMIĘ_PIERWSZE'].sample(n=1, weights=imiona_m['LICZBA_WYSTĄPIEŃ']).values[0] + "'", "'" + str(nazwiska_m['Nawisko aktualne'].sample(n=1, weights=nazwiska_m['Liczba']).values[0]) + "'", "'" + str(plec) + "'", "'" + str(start_ur + timedelta(days=random_ur)) + "'", "'" + str(ulice.sample().values[0, 0]) + "'", "'" + str(int(534720811 + (154406493*np.random.random()))) + "'", "'" + stanowiska_pracy[i] + "'", "'" + str(str(start_zat + min(i//6, 1) * relativedelta(months=3))) + "'")
 
     else:
-        commend += '({}, {}, {}, {}, {}, {}, {}, {}),'.format("'" + imiona_k['IMIĘ_PIERWSZE'].sample(n=1, weights=imiona_m['LICZBA_WYSTĄPIEŃ']).values[0] + "'", "'" + str(nazwiska_k['Nawisko aktualne'].sample(n=1, weights=nazwiska_k['Liczba']).values[0]) + "'", "'" + str(plec) + "'", "'" + str(start_ur + timedelta(days=random_ur)) + "'", "'" + str(ulice.sample().values[0, 0]) + "'", "'" + str(int(534720811 + 154406493*np.random.random())) + "'", "'" + stanowiska_pracy[i] + "'", "'" + str(str(start_zat + min(i//6, 1)*relativedelta(months=3))) + "'")
+        commend += '({}, {}, {}, {}, {}, {}, {}, {}),'.format("'" + imiona_k['IMIĘ_PIERWSZE'].sample(n=1, weights=imiona_m['LICZBA_WYSTĄPIEŃ']).values[0] + "'", "'" + str(nazwiska_k['Nawisko aktualne'].sample(n=1, weights=nazwiska_k['Liczba']).values[0]) + "'", "'" + str(plec) + "'", "'" + str(start_ur + timedelta(days=random_ur)) + "'", "'" + str(ulice.sample().values[0, 0]) + "'", "'" + str(int(534720811 + (154406493*np.random.random()))) + "'", "'" + stanowiska_pracy[i] + "'", "'" + str(str(start_zat + min(i//6, 1) * relativedelta(months=3))) + "'")
 
 engine = create_engine('mysql+pymysql://root:urgith@localhost:3306/klinika_weterynaryjna')
 with engine.connect() as connection:

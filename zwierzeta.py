@@ -7,10 +7,10 @@ import csv
 names_M = []
 names_K = []
 
-fileM = open("data/imionaM.csv",encoding='utf8')
+fileM = open("data/imionaM.csv", encoding='utf8')
 readM = csv.reader(fileM)
 
-fileK = open("data/imionaK.csv",encoding='utf8')
+fileK = open("data/imionaK.csv", encoding='utf8')
 readK = csv.reader(fileK)
 
 for row in readM:
@@ -21,36 +21,51 @@ for row in readK:
     names_K.append(row[0])
 del names_K[0]
 
-species = ['Pies','Kot','Królik','Chomik','Mysz','Szczur']
+species = ['Pies', 'Kot', 'Królik', 'Chomik', 'Mysz', 'Szczur']
 
-dog_breed = ['Buldog amerykański','Alpejski gończy krótkonożny','Amerykański pitbulterier','Cocker spaniel amerykański',
-            'Terier australijski','Bernardyn','Berneński pies pasterski','Buldog francuski','Wyżeł włoski krótkowłosy','Bulterier',
-            'Pudel','Owczarek portugalski','Grzywacz chiński','Pies chodzki','Owczarek szkocki długowłosy','Owczarek szkocki krótkowłosy',
-            'Jamnik','Dalmatyńczyk','Bokser','Owczarek niemiecki','Szpic niemiecki','Doberman','Dog argentyński','Gończy węgierski',
-            'Wyżeł duński','Gończy polski','Owczarek kataloński','Owczarek kaukaski','Mastif angielski','Pekińczyk','Owczarek podhalański',
-            'Samojed','Husky syberyjski']
+dog_breed = [
+    'Buldog amerykański', 'Alpejski gończy krótkonożny', 'Amerykański pitbulterier', 'Cocker spaniel amerykański',
+    'Terier australijski', 'Bernardyn', 'Berneński pies pasterski', 'Buldog francuski', 'Wyżeł włoski krótkowłosy',
+    'Bulterier', 'Pudel', 'Owczarek portugalski', 'Grzywacz chiński', 'Pies chodzki', 'Owczarek szkocki długowłosy',
+    'Owczarek szkocki krótkowłosy', 'Jamnik', 'Dalmatyńczyk', 'Bokser', 'Owczarek niemiecki', 'Szpic niemiecki',
+    'Doberman', 'Dog argentyński', 'Gończy węgierski', 'Wyżeł duński', 'Gończy polski', 'Owczarek kataloński',
+    'Owczarek kaukaski', 'Mastif angielski', 'Pekińczyk', 'Owczarek podhalański', 'Samojed','Husky syberyjski'
+]
 
-cat_breed = ['Tonkijski','Syjamski','Sfinks','Rosyjski niebieski','Pixie-bob','Perski','Orientalny','Maine coon','Korat',
-             'Himalayan','Japoński bobtail','Egipski mau','Doński sfinks','Chausie','Burmilla','Brytyjski krótkowłosy',
-             'Brytyjski długowłosy','Birmański','Amerykański curl długowłosy']
+cat_breed = [
+    'Tonkijski', 'Syjamski', 'Sfinks', 'Rosyjski niebieski', 'Pixie-bob', 'Perski', 'Orientalny', 'Maine coon',
+    'Korat', 'Himalayan', 'Japoński bobtail', 'Egipski mau', 'Doński sfinks', 'Chausie', 'Burmilla',
+    'Brytyjski krótkowłosy', 'Brytyjski długowłosy', 'Birmański', 'Amerykański curl długowłosy'
+]
 
-rabbit_breed = ['Belgijski olbrzym','Francuski baran','Angielski baran','Kalifornijski','Popielański biały','Angora Biała','Mały baran']
+rabbit_breed = [
+    'Belgijski olbrzym', 'Francuski baran', 'Angielski baran', 'Kalifornijski', 'Popielański biały', 'Angora Biała',
+    'Mały baran'
+]
 
-mouse_breed = ['Krótkowłosa','Długowłosa','Loczkowana','Satynowa','Abisyńska']
+mouse_breed = ['Krótkowłosa', 'Długowłosa', 'Loczkowana', 'Satynowa', 'Abisyńska']
 
-chamster_breed = ['Syryjski','Chiński','Dżungarski','Zabajkalski']
+chamster_breed = ['Syryjski', 'Chiński', 'Dżungarski', 'Zabajkalski']
 
-rat_breed = ['Wędrowny','Śniady','Polinezyjski']
+rat_breed = ['Wędrowny', 'Śniady', 'Polinezyjski']
 
 ### wagi i wzrosty minimalne i maksymalne odpowiadają rasom psów znajdujących się na tych samych pozycjach w dog_breed ###
 
-weight_min_dog = [32,15,14,8,4,55,40,8,25,10,13,12,4,16,18,18,5,22,25,25,15,35,40,30,25,22,16,50,75,3,45,25,18]
+weight_min_dog = [
+    32, 15, 14, 8, 4, 55, 40, 8, 25, 10, 13, 12, 4, 16, 18, 18, 5, 22, 25, 25, 15, 35, 40, 30, 25, 22, 16, 50, 75, 3, 45, 25, 18
+]
 
-weight_max_dog = [68,18,27,13,7,100,60,14,40,18,28,18,6,25,25,25,8,26,30,55,28,45,45,35,35,26,18,80,100,6,60,30,27]
+weight_max_dog = [
+    68, 18, 27, 13, 7, 100, 60, 14, 40, 18, 28, 18, 6, 25, 25, 25, 8, 26, 30, 55, 28, 45, 45, 35, 35, 26, 18, 80, 100, 6, 60, 30, 27
+]
 
-height_min_dog = [51,36,43,34,20,65,58,24,55,35,45,40,23,48,51,51,17,55,53,55,40,63,60,50,50,50,45,64,70,15,60,50,50]
+height_min_dog = [
+    51, 36, 43, 34, 20, 65, 58, 24, 55, 35, 45, 40, 23, 48, 51, 51, 17, 55, 53, 55, 40, 63, 60, 50, 50, 50, 45, 64, 70, 15, 60, 50, 50
+]
 
-height_max_dog = [71,38,53,40,25,90,70,35,67,45,60,48,33,56,61,61,25,61,63,65,55,73,68,55,60,60,55,78,90,20,70,60,56]
+height_max_dog = [
+    71, 38, 53, 40, 25, 90, 70, 35, 67, 45, 60, 48, 33, 56, 61, 61, 25, 61, 63, 65, 55, 73, 68, 55, 60, 60, 55, 78, 90, 20, 70, 60, 56
+]
 
 animals = []
 breeds = []
@@ -66,10 +81,12 @@ def random_date(start, end):
     delta = end - start
     int_delta = delta.days
     random_day = random.randrange(int_delta)
-    return start + datetime.timedelta(days = random_day)
+
+    return start + datetime.timedelta(days=random_day)
+
 
 for i in range(400):
-    owners.append(i+1)
+    owners.append(i + 1)
 
 for i in range(300):
     ow = random.randint(1, 400)
@@ -98,7 +115,7 @@ for i in range(700):
     today = datetime.datetime.strptime('6/30/2021', '%m/%d/%Y').date()
 
     if animal == 'Pies':
-        breed = random.sample(dog_breed,1)
+        breed = random.sample(dog_breed, 1)
         indeks = dog_breed.index(breed[0])
 
         w_min = weight_min_dog[indeks]
@@ -106,45 +123,45 @@ for i in range(700):
         h_min = height_min_dog[indeks]
         h_max = height_max_dog[indeks]
 
-        weight = round(random.uniform(w_min,w_max),1)
-        height = round(random.uniform(h_min,h_max),1)
+        weight = round(random.uniform(w_min, w_max), 1)
+        height = round(random.uniform(h_min, h_max), 1)
         start = datetime.datetime.strptime('1/1/2008', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     elif animal == 'Kot':
-        breed = random.sample(cat_breed,1)
-        weight = round(random.uniform(3,8),1)
-        height = round(random.uniform(20,33),1)
+        breed = random.sample(cat_breed, 1)
+        weight = round(random.uniform(3, 8), 1)
+        height = round(random.uniform(20, 33), 1)
         start = datetime.datetime.strptime('1/1/2010', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     elif animal == 'Królik':
-        breed = random.sample(rabbit_breed,1)
-        weight = round(random.uniform(2,4),1)
-        height = round(random.uniform(15,20),1)
+        breed = random.sample(rabbit_breed, 1)
+        weight = round(random.uniform(2, 4), 1)
+        height = round(random.uniform(15, 20), 1)
         start = datetime.datetime.strptime('1/1/2018', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     elif animal == 'Chomik':
-        breed = random.sample(chamster_breed,1)
-        weight = round(random.uniform(0.1,0.3),2)
-        height = round(random.uniform(4,7),1)
+        breed = random.sample(chamster_breed, 1)
+        weight = round(random.uniform(0.1, 0.3), 2)
+        height = round(random.uniform(4, 7), 1)
         start = datetime.datetime.strptime('1/1/2018', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     elif animal == 'Mysz':
-        breed = random.sample(mouse_breed,1)
-        weight = round(random.uniform(0.1,0.2),2)
-        height = round(random.uniform(3,6),1)
+        breed = random.sample(mouse_breed, 1)
+        weight = round(random.uniform(0.1, 0.2), 2)
+        height = round(random.uniform(3, 6), 1)
         start = datetime.datetime.strptime('1/1/2018', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     else:
-        breed = random.sample(rat_breed,1)
-        weight = round(random.uniform(0.1,0.4),2)
-        height = round(random.uniform(5,8),1)
+        breed = random.sample(rat_breed, 1)
+        weight = round(random.uniform(0.1, 0.4), 2)
+        height = round(random.uniform(5, 8), 1)
         start = datetime.datetime.strptime('1/1/2018', '%m/%d/%Y').date()
-        birth_date = random_date(start,end_date)
+        birth_date = random_date(start, end_date)
 
     breeds.append(breed[0])
     weights.append(weight)
@@ -152,17 +169,15 @@ for i in range(700):
     birth_dates.append(birth_date)
 
     time_difference =  today - birth_date
-    age = round((time_difference.days)/365,1)
+    age = round(time_difference.days / 365, 1)
     ages.append(age)
 
-    b = random.random()
-
-    if b <= 0.5:
+    if random.random() <= 0.5:
         sex = 'samiec'
-        name = random.sample(names_M,1)
+        name = random.sample(names_M, 1)
     else:
         sex = 'samica'
-        name = random.sample(names_K,1)
+        name = random.sample(names_K, 1)
 
     sex_list.append(sex)
     names.append(name[0])
