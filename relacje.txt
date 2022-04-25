@@ -1,0 +1,8 @@
+asortyment.produkt -> asortyment.cena [co jakiœ czas kupujemy towar w dok³¹dnie tej samej cenie]
+asortyment.produkt -> asortyment.ilosc [co jakiœ czas kupujemy tak samo du¿o danego towaru]
+zwierzeta.data_urodzenia -> zwierzeta.wiek [z jednego bezpoœrednio wynika drugie] [nawet mo¿na usun¹æ wiek]
+zwiereta.rasa -> zwierzeta.zwierze [ka¿de zwierze ma unikatowe dla siebie rasy]
+zarobki.od -> zarobki.do [zarobki s¹ wyznaczane co miesi¹c, czyli zarobki.do bêdzie dok³adnie miesi¹c po zarobki.od] [nawet mo¿na usun¹æ do]
+zwierze.imie -\> zwierze.plec [nie zachodzi, bo s¹ imiona, które mo¿na przypisaæ zarówno samic¹ jak i samc¹]
+pracownicy.imie -\> pracownicy.plec [nie zachodzi, bo s¹ imiona, które mo¿na przypisaæ zarówno mê¿czyŸnie jak i kobiecie]
+pracownicy.nazwisko -\> pracownicy.plec [nie zachodzi, bo s¹ nazwiska, które mo¿na przypisaæ zarówno mê¿czyŸnie jak i kobiecie]
